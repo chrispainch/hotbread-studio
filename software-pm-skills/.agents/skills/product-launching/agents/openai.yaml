@@ -1,0 +1,7 @@
+interface:
+  display_name: "Product Launching"
+  short_description: "Prepare rollout briefs and launch docs"
+  default_prompt: "Use $product-launching to turn this shaped solution into a launch brief with rollout, docs, and success measurement."
+
+policy:
+  allow_implicit_invocation: true

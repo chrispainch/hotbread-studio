@@ -1,0 +1,70 @@
+{
+  "version": "1.0",
+  "profile": {
+    "name": "",
+    "location": "",
+    "headline": "",
+    "summary": "",
+    "visibility_default": "private"
+  },
+  "organizations": [
+    {
+      "id": "",
+      "name": "",
+      "aliases": [],
+      "locations": [],
+      "notes": "",
+      "roles": [
+        {
+          "id": "",
+          "title": "",
+          "employment_type": "",
+          "location": "",
+          "start": {
+            "year": 0,
+            "month": 0
+          },
+          "end": {
+            "year": 0,
+            "month": 0
+          },
+          "summary_derived": "",
+          "notes": "",
+          "events": [
+            {
+              "id": "",
+              "type": "",
+              "date": {
+                "year": 0,
+                "month": 0
+              },
+              "location": "",
+              "title": "",
+              "what": "",
+              "how": "",
+              "why": "",
+              "outcomes": "",
+              "visibility": "public",
+              "tags": [],
+              "metrics": [],
+              "stakeholders": [],
+              "tools": [],
+              "source_refs": [],
+              "confidence": ""
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "cross_cutting": {
+    "skills": [],
+    "domains": [],
+    "tools": [],
+    "themes": []
+  },
+  "derived": {
+    "career_highlights": [],
+    "resume_variants": []
+  }
+}

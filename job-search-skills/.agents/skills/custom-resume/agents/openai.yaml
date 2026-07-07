@@ -1,0 +1,7 @@
+interface:
+  display_name: "Custom Resume"
+  short_description: "Create a tailored resume from a job posting URL"
+  default_prompt: "Use $custom-resume to create a tailored resume for this job posting URL, save the job context locally, and write the draft into an application workspace."
+
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,7 @@
+interface:
+  display_name: "Career Source Interview"
+  short_description: "Deepen career records from memory into the canonical file"
+  default_prompt: "Use $career-source-interview to enrich missing or thin career records in the canonical source-of-truth file with review before save."
+
+policy:
+  allow_implicit_invocation: true

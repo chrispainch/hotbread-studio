@@ -1,0 +1,7 @@
+interface:
+  display_name: "Breadboarding"
+  short_description: "Map UX flows into flowchart-ready tables"
+  default_prompt: "Use $breadboarding to map this workflow as a table that can translate almost directly into a flowchart."
+
+policy:
+  allow_implicit_invocation: true

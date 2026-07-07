@@ -1,0 +1,7 @@
+interface:
+  display_name: "ASCII UI Exploration"
+  short_description: "Explore interface options before implementation"
+  default_prompt: "Use $ascii-ui-exploration to show ASCII UI options and recommend a direction before we implement this flow."
+
+policy:
+  allow_implicit_invocation: true

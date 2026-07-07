@@ -1,0 +1,7 @@
+interface:
+  display_name: "Solution Shaping"
+  short_description: "Define solution scope before implementation"
+  default_prompt: "Use $solution-shaping to turn this framed problem into a bounded solution document in `prds/`."
+
+policy:
+  allow_implicit_invocation: true

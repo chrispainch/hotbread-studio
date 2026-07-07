@@ -1,0 +1,7 @@
+interface:
+  display_name: "Career Source Intake"
+  short_description: "Map career artifacts into the canonical source-of-truth file"
+  default_prompt: "Use $career-source-intake to turn this pasted content or local file into canonical career records with review before save."
+
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,7 @@
+interface:
+  display_name: "Problem Framing"
+  short_description: "Clarify the need before shaping the solution"
+  default_prompt: "Use $problem-framing to turn this user need into a concise framing brief before we define the solution."
+
+policy:
+  allow_implicit_invocation: true

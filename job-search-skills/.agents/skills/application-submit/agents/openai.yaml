@@ -1,0 +1,7 @@
+interface:
+  display_name: "Application Submit"
+  short_description: "Convert a submitted markdown file to HTML and update application tracking"
+  default_prompt: "Use $application-submit to convert this submitted application markdown file to HTML beside the source file and update application.json to reflect submission."
+
+policy:
+  allow_implicit_invocation: true
