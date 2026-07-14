@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{CANDIDATE_NAME}} - Resume</title>
+    <style>
+      :root {
+        --page-width: 8.5in;
+        --page-padding: 0.55in;
+        --text: #111827;
+        --muted: #4b5563;
+        --rule: #d1d5db;
+        --accent: #0f172a;
+        --bg: #ffffff;
+        --font-body: "Helvetica Neue", Arial, sans-serif;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        background: var(--bg);
+        color: var(--text);
+        font-family: var(--font-body);
+        line-height: 1.35;
+      }
+
+      body {
+        margin: 0 auto;
+        max-width: var(--page-width);
+        padding: var(--page-padding);
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      header {
+        margin-bottom: 1rem;
+      }
+
+      h1 {
+        margin: 0 0 0.2rem;
+        font-size: 1.7rem;
+        line-height: 1.1;
+        letter-spacing: 0.01em;
+        color: var(--accent);
+      }
+
+      .contact-line,
+      .profile-line {
+        margin: 0.1rem 0;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      section {
+        margin-top: 1rem;
+      }
+
+      h2 {
+        margin: 0 0 0.45rem;
+        padding-bottom: 0.18rem;
+        border-bottom: 1px solid var(--rule);
+        font-size: 0.98rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--accent);
+      }
+
+      h3 {
+        margin: 0.75rem 0 0.25rem;
+        font-size: 1rem;
+        font-weight: 700;
+        color: var(--accent);
+      }
+
+      p {
+        margin: 0.25rem 0 0.5rem;
+      }
+
+      ul {
+        margin: 0.2rem 0 0.65rem 1.15rem;
+        padding: 0;
+      }
+
+      li {
+        margin: 0.16rem 0;
+      }
+
+      .role-meta,
+      .education-meta {
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      .skills-list {
+        columns: 2;
+        column-gap: 1.5rem;
+      }
+
+      .skills-list li {
+        break-inside: avoid;
+      }
+
+      @media print {
+        body {
+          max-width: none;
+          padding: 0.4in 0.45in;
+        }
+
+        section {
+          break-inside: avoid;
+        }
+      }
+
+      @media (max-width: 700px) {
+        body {
+          padding: 1rem;
+        }
+
+        .skills-list {
+          columns: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>{{CANDIDATE_NAME}}</h1>
+      <p class="contact-line">{{LOCATION}} | {{EMAIL}} | {{PHONE}}</p>
+      <p class="profile-line">
+        LinkedIn: {{LINKEDIN_DISPLAY_URL}} | GitHub: {{GITHUB_DISPLAY_URL}}
+      </p>
+    </header>
+
+    <section aria-labelledby="summary">
+      <h2 id="summary">Summary</h2>
+      <p>{{SUMMARY}}</p>
+    </section>
+
+    <section aria-labelledby="core-skills">
+      <h2 id="core-skills">Core Skills</h2>
+      <ul class="skills-list">
+        <li>{{SKILL_1}}</li>
+        <li>{{SKILL_2}}</li>
+        <li>{{SKILL_3}}</li>
+        <li>{{SKILL_4}}</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="experience">
+      <h2 id="experience">Experience</h2>
+
+      <article>
+        <h3>{{ROLE_TITLE_1}} | {{ORGANIZATION_1}}</h3>
+        <p class="role-meta">{{DATE_RANGE_1}}</p>
+        <ul>
+          <li>{{ACHIEVEMENT_1A}}</li>
+          <li>{{ACHIEVEMENT_1B}}</li>
+          <li>{{ACHIEVEMENT_1C}}</li>
+        </ul>
+      </article>
+
+      <article>
+        <h3>{{ROLE_TITLE_2}} | {{ORGANIZATION_2}}</h3>
+        <p class="role-meta">{{DATE_RANGE_2}}</p>
+        <ul>
+          <li>{{ACHIEVEMENT_2A}}</li>
+          <li>{{ACHIEVEMENT_2B}}</li>
+          <li>{{ACHIEVEMENT_2C}}</li>
+        </ul>
+      </article>
+    </section>
+
+    <section aria-labelledby="additional-experience">
+      <h2 id="additional-experience">Additional Experience</h2>
+      <p>{{ADDITIONAL_EXPERIENCE}}</p>
+    </section>
+
+    <section aria-labelledby="education">
+      <h2 id="education">Education</h2>
+      <article>
+        <h3>{{DEGREE_OR_PROGRAM}}</h3>
+        <p class="education-meta">{{INSTITUTION}} | {{DATE}}</p>
+      </article>
+    </section>
+
+    <section aria-labelledby="optional-sections">
+      <h2 id="optional-sections">Optional Sections</h2>
+      <p>
+        Include only when relevant and supported by the source material:
+        certifications, selected projects, publications, or languages.
+      </p>
+    </section>
+  </body>
+</html>

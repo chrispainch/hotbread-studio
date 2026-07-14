@@ -32,6 +32,7 @@ Before acting, read:
 - `references/application.template.json`
 - `references/requirements.template.json`
 - `references/resume.template.md`
+- `references/resume.template.html`
 
 ## Core Rules
 
@@ -44,7 +45,8 @@ Before acting, read:
 - Tailored resume outputs are derived artifacts and may be regenerated
 - Do not mutate `data/career-source.json` as part of resume generation
 - Review requirement interpretation before finalizing the resume when the capture is ambiguous or the posting is noisy
-- Store resumes in markdown first unless the user explicitly asks for another format
+- Always write the tailored resume as both markdown and sibling HTML
+- Treat markdown as the editable source of truth and HTML as a derived render
 - Do not invent missing qualifications
 - If an important requirement is unsupported by the career source, keep it out of the resume and surface that gap clearly
 - Optimize for credible evidence selection first, keyword coverage second
@@ -96,12 +98,14 @@ Before acting, read:
 
 7. Generate the tailored resume.
 - Start from `references/resume.template.md`.
+- Render the sibling HTML file from `references/resume.template.html`.
 - Reorder experience so the most relevant evidence appears first.
 - Write a tailored summary aligned to the target role.
 - Rewrite bullets to match the posting's language and priorities without copying verbatim.
 - Strengthen achievements with measurable impact when available.
-- Keep the output ATS-friendly: no tables, icons, or decorative structure.
+- Keep both outputs ATS-friendly: no tables, icons, or decorative structure.
 - Write the resume as a derived markdown artifact in the application workspace.
+- Write a sibling derived HTML artifact beside the markdown file using the same basename.
 - Default to `tailored-resume.v1.md` for the first draft.
 - Use later explicit version numbers for meaningful revisions.
 
@@ -110,7 +114,7 @@ Before acting, read:
   - the key requirement interpretation
   - the main evidence selected from the career source
   - any important unsupported requirements
-  - the generated draft path
+  - the generated markdown and HTML draft paths
 - If revising, either overwrite the current draft intentionally or create a new numbered version.
 - If the user wants to mark the final version, save `submitted-resume.md`.
 
@@ -123,6 +127,7 @@ Before acting, read:
 - Compress evidence into a coherent narrative instead of dumping every matching keyword
 - When unsure between two directions, bias toward credibility and specificity
 - Use ATS-friendly plain structure
+- Keep the HTML render simple, printable, and structurally faithful to the markdown source
 - Prefer explicit accomplishments over generic responsibility statements
 - Reorder and rewrite existing evidence before inventing new résumé sections
 
@@ -131,14 +136,15 @@ Before acting, read:
 - `application.json` stores structured metadata about the target role and application
 - `job-posting.md` stores the local working copy of the posting
 - `requirements.json` stores derived interpretation
-- `<name>_cv_<company>_<job>.vN.md` stores generated drafts
+- `<name>_cv_<company>_<job>.vN.md` stores generated editable drafts
+- `<name>_cv_<company>_<job>.vN.html` stores generated rendered drafts beside the markdown source
 
 ## Stopping Condition
 
 This skill is done when:
 - the application workspace has the required captured posting artifacts
 - `requirements.json` has been created or updated
-- a tailored resume draft has been saved in the workspace
+- tailored markdown and HTML resume drafts have been saved in the workspace
 - the user has enough output to review, revise, or submit
 
 ## Handoff
@@ -147,6 +153,5 @@ Recommend `career-source-interview` when:
 - the best evidence for the target role is too thin in `data/career-source.json`
 - the generated resume reveals missing metrics, stakeholders, or project detail that should be added to the source of truth
 
-Recommend `application-submit` when:
-- the resume markdown is final and has been submitted
-- the user wants canonical submitted artifacts plus rendered HTML archived in the workspace
+Recommend `job-pipeline-tracking` when:
+- the user wants `application.json` updated to reflect application or interview progress

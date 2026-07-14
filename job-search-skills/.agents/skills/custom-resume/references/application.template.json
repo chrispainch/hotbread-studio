@@ -7,9 +7,17 @@
   "employment_type": "",
   "salary": "",
   "date_captured": "",
-  "status": "draft",
+  "date_applied": "",
   "date_submitted": "",
+  "date_closed": "",
+  "status": "draft",
+  "stage": "saved",
+  "last_updated": "",
+  "last_interaction_date": "",
+  "next_step": "",
+  "next_step_date": "",
   "notes": "",
   "posting_last_updated": "",
-  "submitted_artifacts": {}
+  "submitted_artifacts": {},
+  "activity_log": []
 }

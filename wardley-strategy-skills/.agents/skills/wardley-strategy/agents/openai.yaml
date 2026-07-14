@@ -1,0 +1,4 @@
+interface:
+  display_name: "Wardley Strategy"
+  short_description: "Wardley Maps for strategy work"
+  default_prompt: "Use $wardley-strategy to clarify user needs, map evolution, and derive context-specific strategic plays."

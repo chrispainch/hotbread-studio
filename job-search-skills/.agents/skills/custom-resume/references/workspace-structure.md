@@ -23,7 +23,8 @@ applications/
 - preserve the original URL in `application.json.source_url`
 - use `job-posting.md` as the single local persisted copy of the posting
 - use `requirements.json` for derived requirement interpretation
-- use markdown as the editable source format for tailored resumes in v1
+- use markdown as the editable source format for tailored resumes
+- write a sibling HTML render beside each tailored resume markdown draft
 - the submitted markdown file remains the exact source actually used to apply
 - submitted HTML files are derived archives rendered beside the submitted markdown source files
 

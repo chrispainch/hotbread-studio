@@ -1,0 +1,7 @@
+interface:
+  display_name: "Job Pipeline Tracking"
+  short_description: "Track application progress and summarize pipeline state"
+  default_prompt: "Use $job-pipeline-tracking to update this job application's progress or summarize the current state of the job search pipeline."
+
+policy:
+  allow_implicit_invocation: true
